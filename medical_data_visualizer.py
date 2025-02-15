@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 1
-df = None
+df = pd.read_csv('medical_examination.csv')
 
 # 2
-df['overweight'] = None
+BMI = df['weight'] / (df['height'] / 100) ** 2
+df['overweight'] = np.where(BMI > 25, 1, 0)
 
 # 3
 
