@@ -11,6 +11,8 @@ BMI = df['weight'] / (df['height'] / 100) ** 2
 df['overweight'] = np.where(BMI > 25, 1, 0)
 
 # 3
+df['cholesterol'] = np.where(df['cholesterol'] > 1, 1, 0)
+df['gluc'] = np.where(df['gluc'] > 1, 1, 0)
 
 
 # 4
